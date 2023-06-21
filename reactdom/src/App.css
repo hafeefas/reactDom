@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.link{
+  text-decoration: none;
+  font-size:40px;
+  color:white;
+  background-color: rgb(114, 114, 207);
+  padding-left:105px; 
+  padding-right:105px; 
+}
+.links{
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+img{
+  margin-right: 20px;
+}
