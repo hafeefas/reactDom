@@ -77,9 +77,9 @@ function App() {
           <ul>
             <li className="links">
               <section className="links">
-                <button className = "button"><Link to = "/" className="link">Home</Link> </button>
-                <button className = "button"><Link to = "/DebitAccount" className="link">Debit</Link></button>
-                <button className = "button"><Link to = "/Credit" className="link"> Credit </Link></button>
+                <button className = "button"><Link to = "/reactDom/" className="link">Home</Link> </button>
+                <button className = "button"><Link to = "/reactDom/DebitAccount/" className="link">Debit</Link></button>
+                <button className = "button"><Link to = "/reactDom/Credit" className="link"> Credit </Link></button>
               </section>
             </li>
           </ul>
@@ -90,7 +90,7 @@ function App() {
           <div className = "balance">
             <p className="block debit"> Debit: ${Number(debit).toFixed(2)}</p>
             <p className="block balance"> Balance: ${balance.toFixed(2)} </p> 
-            <p className="block "> Credit: ${Number(credit).toFixed(2)}</p>
+            <p className="block credit"> Credit: ${Number(credit).toFixed(2)}</p>
           </div>
           ) : (
             <p> Error, please try again </p>
@@ -98,9 +98,9 @@ function App() {
           }
 
           <Routes>
-            <Route path = "/" element= {<Home/>} /> 
-            <Route path = "/DebitAccount" element= {<DebitAccount debitList= {debitList} addDebit = {addDebit} />}  /> 
-            <Route path = "/Credit" element = {<Credit  creditList={creditList} addCredit={addCredit} />} />
+            <Route path = "/reactDom/" element= {<Home/>} /> 
+            <Route path = "/reactDom/DebitAccount/*" element= {<DebitAccount debitList= {debitList} addDebit = {addDebit} />}  /> 
+            <Route path = "/reactDom/Credit/*" element = {<Credit  creditList={creditList} addCredit={addCredit} />} />
           </Routes>
       </Router>
     </div>
@@ -109,37 +109,4 @@ function App() {
 
 export default App;
 
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
-// import Home from "./components/Home";
-// import UserProfile from "./components/UserProfile";
-
-// function App() {
-//   return (
-//     <Router>
-//       <div className="App">
-//         {/* Navigation */}
-//         <nav>
-//           <ul>
-//             <li>
-//               <Link to="/">Home</Link>
-//             </li>
-//             <li>
-//               <Link to="/userProfile">User Profile</Link>
-//             </li>
-//           </ul>
-//         </nav>
-
-//         {/* Routes */}
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/userProfile/*" element={<UserProfile />} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default App;
 
