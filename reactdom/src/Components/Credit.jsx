@@ -27,16 +27,17 @@ const Credit = (props) => {
 
     return (
         <div className="container">
-          <h1 className="heading">CREDIT</h1>
+          <h1 className="heading" style={{fontStyle:"normal"}}>CREDIT ACCOUNT</h1>
           {/* <h2 className="subtitle">Welcome to your credits page! You can manage your transactions below</h2> */}
           <div className="image-container">
             <img
               src="https://media.istockphoto.com/id/1254993875/photo/cropped-image-of-business-woman-hand-working-laptop-computer-in-home-office.webp?b=1&s=170667a&w=0&k=20&c=knBGipYVyUge-Kjp6i_X-gP44HNPsd7GsIZ5hqx98Y8="
               className="image"
-              style={{width:"800px"}}
+              style={{width:"800px", maxWidth:"100%"}}
               alt="banking"
             />
-          </div>
+          </div><br/>
+          <h1 style={{fontStyle:"italic", padding:"14px", paddingBottom:"35px"}}>Here, you can add deposits to your credit account.</h1>
           <form onSubmit={handleForm} className="form-container">
             <label>Add description:</label>
             <br />
@@ -50,7 +51,7 @@ const Credit = (props) => {
           </form>
 
           <div className="credit-history">
-            <h3>Your credit history:</h3>
+            <h3>Your credit history can be found below:</h3>
             {props.creditList.map((item, index) => (
               <div key={index} className="credit-item">
                 <p>

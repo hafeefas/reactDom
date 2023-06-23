@@ -43,11 +43,12 @@ function App() {
     fetchData();
 }, []); 
 
+//this stuff will help calculate debit and credit not the first balance
     const addDebit = (debit) => {
         setDebit((previousDebit) => 
         //this will be returned
         //previous debit is the previous value of debit. this can be named anything
-          Number(previousDebit) + Number(debit.amount)
+          Number(previousDebit) + Number(debit.amount)  // Update the debit state by adding the new debit amount (when the user puts in)
         ) 
         setBalance((previousBalance) => 
         //debit.amount is already set to a number because it comes after prevoiusBalance which is a number

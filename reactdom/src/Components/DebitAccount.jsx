@@ -28,15 +28,16 @@ const DebitAccount = (props) => {
 
     return (
         <div className="debit-container">
-          <h1 className="heading">DEBIT</h1>
+          <h1 className="heading" style={{fontStyle:"normal"}}>DEBIT ACCOUNT</h1>
           <div className="image-container">
             <img
               src="https://i0.wp.com/clark.com/wp-content/uploads/2021/11/IMG_2922.jpg?fit=1200%2C630&ssl=1"
               className="image"
+              style={{maxWidth:"100%"}}
               alt="banking"
             />
           </div> <br/>
-    
+          <h1 style={{fontStyle:"italic", padding:"14px", paddingBottom:"35px"}}>Here, you can add deposits to your debit account.</h1>
           <form onSubmit={handleForm} className="form-container">
             <label>Add description:</label>
             <input placeholder="Add Description" type="text" className="input-field" style={{marginLeft:"10px"}}/>
@@ -50,7 +51,7 @@ const DebitAccount = (props) => {
           </form>
     
           <div className="credit-history">
-            <h3>Your debit history:</h3>
+            <h3>Your debit history can be found below</h3>
             {props.debitList.map((item, index) => (
               <div key={index} className="credit-item">
                 <p>

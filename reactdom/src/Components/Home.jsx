@@ -7,7 +7,8 @@ const Home = () => {
 
         <h1 style={{marginBottom:"40px"}}> Welcome to your home page. Where would you like to visit?</h1>
 
-        <img src ='https://st3.depositphotos.com/3591429/13203/i/450/depositphotos_132036332-stock-photo-women-working-with-computer.jpg' style={{width:"100", borderRadius:"20px"}}/>
+        <img src ='https://st3.depositphotos.com/3591429/13203/i/450/depositphotos_132036332-stock-photo-women-working-with-computer.jpg' 
+        style={{width:"100", borderRadius:"20px", maxWidth:"100%"}}/>
         <div class="container">
             <p style={{padding:"50px" , fontSize:"20px"}}>
                 Welcome to our online banking platform! With our bank account services, 
